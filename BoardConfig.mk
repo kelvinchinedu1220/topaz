@@ -3,21 +3,26 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+# Copyright (C) 2024 The OrangeFox Recovery Project
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
 
-DEVICE_PATH := device/xiaomi/tapas
+DEVICE_PATH := device/xiaomi/topaz
 
 # Architecture
 TARGET_ARCH                := arm64
 TARGET_ARCH_VARIANT        := armv8-a
 TARGET_CPU_ABI             := arm64-v8a
 TARGET_CPU_ABI2            :=
-TARGET_CPU_VARIANT         := generic
+TARGET_CPU_VARIANT         := cortex-a73
+TARGET_CPU_VARIANT_RUNTIME := cortex-a73
 
-TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT    := armv7-a-neon
+TARGET_2ND_ARCH 	   := arm
+TARGET_2ND_ARCH_VARIANT    := armv8-a
 TARGET_2ND_CPU_ABI         := armeabi-v7a
 TARGET_2ND_CPU_ABI2        := armeabi
-TARGET_2ND_CPU_VARIANT     := cortex-a9
+TARGET_2ND_CPU_VARIANT     := cortex-a53
+TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
 # Bootloader
 TARGET_NO_BOOTLOADER          := true
@@ -55,26 +60,20 @@ BOARD_RAMDISK_USE_LZ4 := true
 ENABLE_CPUSETS    := true
 ENABLE_SCHEDBOOST := true
 
-# A/B
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += \
-    boot \
-    dtbo \
-    init_boot \
-    odm \
-    product \
-    recovery \
-    system \
-    system_dlkm \
-    system_ext \
-    vbmeta \
-    vbmeta_system \
-    vendor \
-    vendor_boot \
-    vendor_dlkm
-
 # Verified Boot
 BOARD_AVB_ENABLE := true
+BOARD_AVB_VBMETA_SYSTEM := system
+BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
+
+# broken stuff
+ALLOW_MISSING_DEPENDENCIES := true
+BUILD_BROKEN_USES_NETWORK := true
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 
 # VNDK Treble
 BOARD_VNDK_VERSION := current
@@ -130,3 +129,8 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_USES_LOGD := true
+TWRP_INCLUDE_LOGCAT := true
+
+# python
+TW_INCLUDE_PYTHON := true
+#
