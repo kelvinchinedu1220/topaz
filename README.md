@@ -1,8 +1,4 @@
-# orangefox_device_xiaomi_tapas
-
-Redmi Note 12 4G (codenamed _"topaz/tapas"_) is a mid-range smartphone from Xiaomi announced in March 2023.
-
-[![GitHub Total Downloads](https://img.shields.io/github/downloads/chickendrop89/orangefox_device_xiaomi_tapas/total?style=social&color=white&link=https%3A%2F%2Fgithub.com%2Fchickendrop89%2Forangefox_device_xiaomi_tapas%2Freleases)](https://github.com/chickendrop89/orangefox_device_xiaomi_tapas/releases) [![SourceForge Total Downloads](https://img.shields.io/sourceforge/dt/orangefox-device-xiaomi-tapas?style=social&logo=sourceforge&logoColor=%23000000)](https://sourceforge.net/projects/orangefox-device-xiaomi-tapas/files)
+# OrangeFox device tree for Xiaomi Redmi Note 12 4G devices (codenamed _topaz_ / _tapas_)
 
 
 ## Device specifications
@@ -23,7 +19,7 @@ Camera                  | 50 MP (wide), 2 MP (macro), 12 MP (ultrawide), 13 MP (
 
 ## Device picture
 
-![Redmi Note 12 4G](https://i02.appmifile.com/224_operator_sg/10/03/2023/cdf4a7f40a92668d1c8fe2fcc5045ea8.png)
+![ Redmi Note 12 4G ](https://i02.appmifile.com/224_operator_sg/10/03/2023/cdf4a7f40a92668d1c8fe2fcc5045ea8.png "Redmi Note 12 4G")
 
 ## Features
 
@@ -37,12 +33,19 @@ Works:
 - [X] MTP
 - [X] Sideload
 - [X] USB OTG
-- [X] SD Card
+- [X] MicroSD Card
 - [X] Vibrator
 
-## To use it:
+## Building
+
+You can find a full compile guide for OrangeFox [Here](https://wiki.orangefox.tech/en/dev/building)
+
+_Lunch_ command :
 
 ```
-fastboot flash recovery_a out/target/product/tapas/recovery.img
-fastboot flash recovery_b out/target/product/tapas/recovery.img
+lunch twrp_topaz-eng && mka adbd recoveryimage
 ```
+
+## Credits
+- [Original tapas tree by chickendrop89](https://github.com/chickendrop89/orangefox_device_xiaomi_tapas.git)
+
