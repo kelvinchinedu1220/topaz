@@ -115,7 +115,7 @@ TW_MAX_BRIGHTNESS       := 2047
 TW_EXTRA_LANGUAGES      := true
 TW_EXCLUDE_APEX         := true
 TW_INCLUDE_FASTBOOTD    := true
-TW_FRAMERATE 		:= 90
+TW_FRAMERATE 		:= 60
 
 # Blacklist Goodix fingerprint. There's no reason to include this input in recovery
 TW_INPUT_BLACKLIST := "uinput-goodix"
