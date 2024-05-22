@@ -43,7 +43,7 @@ OF_FL_PATH1 := /system/etc/flashlight
 OF_UNBIND_SDCARD_F2FS := 1
 
 # number of list options before scrollbar creation
-OF_OPTIONS_LIST_NUM := 6
+OF_OPTIONS_LIST_NUM := 9
 
 # don't spam the console with loop errors
 OF_LOOP_DEVICE_ERRORS_TO_LOG := 1
