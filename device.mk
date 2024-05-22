@@ -36,6 +36,9 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti.recovery \
     miui_prebuilt
 
+# Include the bootctl binary
+RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/bootctl
+
 # FastbootD support
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
