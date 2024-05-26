@@ -48,6 +48,9 @@ OF_OPTIONS_LIST_NUM := 9
 # don't spam the console with loop errors
 OF_LOOP_DEVICE_ERRORS_TO_LOG := 1
 
+# A/B with recovery partition
+OF_AB_DEVICE_WITH_RECOVERY_PARTITION := 1
+
 # don't keep log history - only use for Stable releases
 # OF_DONT_KEEP_LOG_HISTORY := 1
 
