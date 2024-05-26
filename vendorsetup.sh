@@ -50,6 +50,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_DELETE_AROMAFM=1
 	export FOX_DELETE_INITD_ADDON=1
 	export FOX_USE_UPDATED_MAGISKBOOT=1
+	export FOX_USE_ZSTD_BINARY=1
 else
 	if [ -z "$FOX_BUILD_DEVICE" -a -z "$BASH_SOURCE" ]; then
 		echo "I: This script requires bash. Not processing the $FDEVICE $(basename $0)"
