@@ -45,7 +45,11 @@ BOARD_MKBOOTIMG_ARGS          += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS          += --pagesize $(BOARD_KERNEL_PAGESIZE)
 
 # device information for "fastboot update <zip-file>"
-TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+ifeq ($(FOX_VARIANT),unified)
+ TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info-unified.txt
+else
+ TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+endif
 
 # GSI && GKI
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
