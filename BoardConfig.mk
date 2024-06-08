@@ -7,8 +7,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 
-DEVICE_PATH := device/xiaomi/topaz
-
 # Architecture
 TARGET_ARCH                := arm64
 TARGET_ARCH_VARIANT        := armv8-a
@@ -43,13 +41,6 @@ TARGET_KERNEL_CLANG_COMPILE   := true
 TARGET_PREBUILT_KERNEL        := /dev/null # empty kernel image
 BOARD_MKBOOTIMG_ARGS          += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS          += --pagesize $(BOARD_KERNEL_PAGESIZE)
-
-# device information for "fastboot update <zip-file>"
-ifeq ($(FOX_VARIANT),unified)
- TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info-unified.txt
-else
- TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
-endif
 
 # GSI && GKI
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
@@ -134,7 +125,6 @@ TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
