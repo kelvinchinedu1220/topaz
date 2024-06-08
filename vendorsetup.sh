@@ -35,7 +35,9 @@ fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export LC_ALL="C"
-	export TARGET_DEVICE_ALT="tapas"
+	export TARGET_DEVICE_ALT="tapas,sapphire,sapphiren,topaz"
+	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
+	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
 	export FOX_VIRTUAL_AB_DEVICE=1
 	export FOX_AB_DEVICE=1
 	export FOX_VANILLA_BUILD=1
@@ -51,10 +53,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_DELETE_INITD_ADDON=1
 	export FOX_USE_UPDATED_MAGISKBOOT=1
 	export FOX_USE_ZSTD_BINARY=1
-	if [ "$FOX_UNIFIED_BUILD" = "1" ]; then
-		export FOX_VARIANT="unified"
-		export TARGET_DEVICE_ALT="tapas,sapphire,sapphiren"
-	fi
 else
 	if [ -z "$FOX_BUILD_DEVICE" -a -z "$BASH_SOURCE" ]; then
 		echo "I: This script requires bash. Not processing the $FDEVICE $(basename $0)"

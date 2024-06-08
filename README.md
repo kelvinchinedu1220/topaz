@@ -1,4 +1,4 @@
-# OrangeFox device tree for Xiaomi "bengal" (sm6225 4G) devices
+# OrangeFox device tree for Xiaomi Snapdragon 685 (SM6225-AD) devices
 ## 1. Xiaomi Redmi Note _12_ 4G (codenamed _topaz_ / _tapas_)
 ## 2. Xiaomi Redmi Note _13_ 4G (codenamed _sapphire_ / _sapphiren_)
 

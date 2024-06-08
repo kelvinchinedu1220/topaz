@@ -27,7 +27,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
 PRODUCT_NAME := twrp_$(PRODUCT_RELEASE_NAME)
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi Note 12 4G
+PRODUCT_MODEL := Redmi Note 12/13 4G
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 #
