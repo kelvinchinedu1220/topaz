@@ -129,6 +129,9 @@ TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
 
+# screen
+TW_NO_SCREEN_BLANK := true
+
 # python
 TW_INCLUDE_PYTHON := true
 #
