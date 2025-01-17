@@ -1,6 +1,6 @@
 #
 #	This file is part of the OrangeFox Recovery Project
-# 	Copyright (C) 2024 The OrangeFox Recovery Project
+# 	Copyright (C) 2024-2025 The OrangeFox Recovery Project
 #
 #	OrangeFox is free software: you can redistribute it and/or modify
 #	it under the terms of the GNU General Public License as published by
@@ -29,7 +29,7 @@ OF_CLOCK_POS := 1
 # other stuff
 OF_IGNORE_LOGICAL_MOUNT_ERRORS := 1
 OF_USE_GREEN_LED := 0
-OF_QUICK_BACKUP_LIST := /boot;/data;
+OF_QUICK_BACKUP_LIST := /boot;/data;/init_boot;
 OF_ENABLE_LPTOOLS := 1
 OF_NO_TREBLE_COMPATIBILITY_CHECK := 1
 
