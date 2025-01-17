@@ -1,6 +1,6 @@
 #
 #	This file is part of the OrangeFox Recovery Project
-# 	Copyright (C) 2024 The OrangeFox Recovery Project
+# 	Copyright (C) 2024-2025 The OrangeFox Recovery Project
 #
 #	OrangeFox is free software: you can redistribute it and/or modify
 #	it under the terms of the GNU General Public License as published by
@@ -51,7 +51,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_XZ_UTILS=1
 	export FOX_DELETE_AROMAFM=1
 	export FOX_DELETE_INITD_ADDON=1
-	export FOX_USE_UPDATED_MAGISKBOOT=1
 	export FOX_USE_ZSTD_BINARY=1
 else
 	if [ -z "$FOX_BUILD_DEVICE" -a -z "$BASH_SOURCE" ]; then
