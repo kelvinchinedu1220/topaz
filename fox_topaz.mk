@@ -59,4 +59,7 @@ OF_AB_DEVICE_WITH_RECOVERY_PARTITION := 1
 
 # use lz4 compression (don't duplicate the setting - already set by "BOARD_RAMDISK_USE_LZ4 := true")
 # OF_USE_LZ4_COMPRESSION := 1
+
+# build all the partition tools
+OF_ENABLE_ALL_PARTITION_TOOLS := 1
 #
