@@ -1,7 +1,7 @@
 #!/system/bin/sh
 #
 #	This file is part of the OrangeFox Recovery Project
-# 	Copyright (C) 2024 The OrangeFox Recovery Project
+# 	Copyright (C) 2024-2025 The OrangeFox Recovery Project
 #
 #	OrangeFox is free software: you can redistribute it and/or modify
 #	it under the terms of the GNU General Public License as published by
@@ -40,9 +40,9 @@ do_prep() {
 }
 
 backup_fox() {
-	local f=$1;
-	if [ -f $f ]; then
-		local x=$(unzip -lq $f | grep "payload.bin");
+	local f="$@";
+	if [ -f "$f" ]; then
+		local x=$(unzip -lq "$f" | grep "payload.bin");
 		[ -n "$x" ] && return; # standard payload.bin - no need for a backup
 	fi
 
