@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-# Copyright (C) 2024 The OrangeFox Recovery Project
+# Copyright (C) 2024-2025 The OrangeFox Recovery Project
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 
@@ -55,6 +55,9 @@ PRODUCT_PACKAGES += \
 # API
 PRODUCT_SHIPPING_API_LEVEL  := 31
 PRODUCT_TARGET_VNDK_VERSION := 33
+BOARD_SHIPPING_API_LEVEL := 31
+BOARD_API_LEVEL := 31
+SHIPPING_API_LEVEL := 31
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
