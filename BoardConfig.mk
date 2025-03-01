@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-# Copyright (C) 2024 The OrangeFox Recovery Project
+# Copyright (C) 2024-2025 The OrangeFox Recovery Project
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 
@@ -38,7 +38,7 @@ TARGET_KERNEL_HEADER_ARCH     := arm64
 BOARD_KERNEL_IMAGE_NAME       := Image
 BOARD_BOOT_HEADER_VERSION     := 4
 TARGET_KERNEL_CLANG_COMPILE   := true
-TARGET_PREBUILT_KERNEL        := /dev/null # empty kernel image
+TARGET_PREBUILT_KERNEL        := $(DEVICE_PATH)/prebuilt/kernel
 BOARD_MKBOOTIMG_ARGS          += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS          += --pagesize $(BOARD_KERNEL_PAGESIZE)
 
